@@ -10,11 +10,11 @@ public class Breakout : MonoBehaviour
         this.broke_out = false;
         action.action.Enable();
         action.action.performed += (ctx) => {
-            if (this.broke_out)
-                transform.position = new Vector3(30,-15,15);
-            else
-                transform.position = new Vector3(0,0,0);
             this.broke_out = !this.broke_out;
+            if (this.broke_out)
+                transform.position = new Vector3(-30,-15,-15);
+            else
+                transform.position = new Vector3(0,0.5f,-7.2f);
         };
         
     }
